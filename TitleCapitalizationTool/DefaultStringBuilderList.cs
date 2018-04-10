@@ -1,0 +1,19 @@
+﻿using System.Collections.Generic;
+using System.Text;
+
+namespace TitleCapitalizationTool
+{
+    internal class DefaultStringBuilderList : StringBuilderList
+    {
+        private List<StringBuilder> _stringBuilders = new List<StringBuilder>();
+
+        public DefaultStringBuilderList(string context)
+        {
+            _stringBuilders.Add(new StringBuilder(context));
+        }
+        public override List<StringBuilder> GetStringBuilderList()
+        {
+            return _stringBuilders;
+        }
+    }
+}

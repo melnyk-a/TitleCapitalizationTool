@@ -42,8 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationLibrary.cs" />
+    <Compile Include="Decorator\DashDecorator.cs" />
+    <Compile Include="DefaultStringBuilderList.cs" />
+    <Compile Include="Decorator\FirsAndLastRegisterDecorator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Decorator\PunctuationDecorator.cs" />
+    <Compile Include="Decorator\RegisterDecorator.cs" />
+    <Compile Include="Decorator\SpaceDecorator.cs" />
+    <Compile Include="Decorator\SpecialWordRegisterDecorator.cs" />
+    <Compile Include="StringBuilderList.cs" />
+    <Compile Include="Decorator\StringBuilderListDecorator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
