@@ -2,7 +2,7 @@
 
 namespace TitleCapitalizationTool
 {
-    internal class ApplicationLibrary
+    internal static class ApplicationLibrary
     {
         private static List<char> _charLibrary = new List<char>{
             ',', ';', ':', '-','.','!','?' };
