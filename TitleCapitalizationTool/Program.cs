@@ -3,13 +3,13 @@ using System.Text.RegularExpressions;
 
 namespace TitleCapitalizationTool
 {
-    class Program
+    internal class Program
     {
-        static bool IsEnglish(string source)
+        private static bool IsEnglish(string source)
         {
             return Regex.IsMatch(source, "[ -z]");
         }
-        static string InputString()
+        private static string InputString()
         {
             Console.Write("Enter title to capitalize: ");
             Console.ForegroundColor = ConsoleColor.Red;
@@ -24,7 +24,7 @@ namespace TitleCapitalizationTool
             Console.ResetColor();
             return input;
         }
-        static void Capitalize(string source)
+        private static void Capitalize(string source)
         {
             if (source == null)
             {
@@ -47,12 +47,12 @@ namespace TitleCapitalizationTool
             Console.WriteLine(str);
             Console.ResetColor();
         }
-        static void Execute(string context)
+        private static void Execute(string context)
         {
             Capitalize(context);
             Console.WriteLine();
         }
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             if (args.Length==0)
             {
