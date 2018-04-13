@@ -30,7 +30,7 @@ namespace TitleCapitalizationTool
         {
             return _articles.Contains(word) ||
                 _conjunctions.Contains(word) ||
-                _preposition.Contains(word);
+                _prepositions.Contains(word);
         }
     }
 }
