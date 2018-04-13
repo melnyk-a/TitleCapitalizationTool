@@ -44,8 +44,8 @@ namespace TitleCapitalizationTool
         private void ExpandBuilderList(List<StringBuilder> expanded, StringBuilder source, char symbol)
         {
             string builderString = source.ToString(0, source.Length);
-            string[] substrings = builderString.Split(new char[] {
-                                symbol }, StringSplitOptions.RemoveEmptyEntries);
+            char[] symbolArray = { symbol };
+            string[] substrings = builderString.Split(symbolArray, StringSplitOptions.RemoveEmptyEntries);
             for (int k = 0; k < substrings.Length; ++k)
             {
                 if (source[0] == symbol)
