@@ -5,7 +5,7 @@ namespace TitleCapitalizationTool
     internal static class ApplicationLibrary
     {
         private static List<char> _charLibrary = new List<char>{
-            ',', ';', ':', '-','.','!','?' };
+            ',', ';', ':', '-', '.', '!', '?' };
         private static List<string> _articles = new List<string> { "a", "an", "the" };
         private static List<string> _unions = new List<string>{
             "and", "but", "for", "nor", "so", "yet" };
