@@ -11,7 +11,7 @@ namespace TitleCapitalizationTool
 
         }
 
-        protected override void ModifyStringBuilderList(ref IList<StringBuilder> stringBuilders)
+        protected override void ModifyStringBuilderList(IList<StringBuilder> stringBuilders)
         {
             List<StringBuilder> tempBuilders = new List<StringBuilder>();
             for (int i = 0; i < stringBuilders.Count; ++i)
@@ -38,7 +38,11 @@ namespace TitleCapitalizationTool
                     }
                 }
             }
-            stringBuilders = tempBuilders;
+            stringBuilders.Clear();
+            foreach (var item in tempBuilders)
+            {
+                stringBuilders.Add(item);
+            }
         }
 
         private void ExpandBuilderList(IList<StringBuilder> expanded, StringBuilder source, char symbol)

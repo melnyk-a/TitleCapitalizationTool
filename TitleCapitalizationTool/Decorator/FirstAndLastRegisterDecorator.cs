@@ -10,7 +10,7 @@ namespace TitleCapitalizationTool
 
         }
 
-        protected override void ModifyStringBuilderList(ref IList<StringBuilder> stringBuilders)
+        protected override void ModifyStringBuilderList(IList<StringBuilder> stringBuilders)
         {
             CapitilizeFirstCharacter(stringBuilders[0]);
             CapitilizeFirstCharacter(stringBuilders[stringBuilders.Count - 1]);

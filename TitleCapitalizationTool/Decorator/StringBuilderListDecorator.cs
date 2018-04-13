@@ -12,12 +12,12 @@ namespace TitleCapitalizationTool
             _stringBuilderList = context;
         }
 
-        protected abstract void ModifyStringBuilderList(ref IList<StringBuilder> stringBuilders);
+        protected abstract void ModifyStringBuilderList(IList<StringBuilder> stringBuilders);
 
         public override IList<StringBuilder> GetStringBuilderList()
         {
             var innerStringBuilder = _stringBuilderList.GetStringBuilderList();
-            ModifyStringBuilderList(ref innerStringBuilder);
+            ModifyStringBuilderList(innerStringBuilder);
             return innerStringBuilder;
         }
     }
