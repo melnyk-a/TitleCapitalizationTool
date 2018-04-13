@@ -16,7 +16,7 @@ namespace TitleCapitalizationTool
         {
             "and", "but", "for", "nor", "so", "yet"
         };
-        private static List<string> _preposition = new List<string>
+        private static List<string> _prepositions = new List<string>
         {
             "at", "by", "in", "of", "on", "or", "out", "to", "up"
         };
@@ -30,7 +30,7 @@ namespace TitleCapitalizationTool
         {
             return _articles.Contains(word) ||
                 _conjunctions.Contains(word) ||
-                _preposition.Contains(word);
+                _prepositions.Contains(word);
         }
     }
 }
