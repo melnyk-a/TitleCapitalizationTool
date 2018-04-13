@@ -12,7 +12,7 @@ namespace TitleCapitalizationTool
         {
             "a", "an", "the"
         };
-        private static List<string> _unions = new List<string>
+        private static List<string> _conjunctions = new List<string>
         {
             "and", "but", "for", "nor", "so", "yet"
         };
@@ -29,7 +29,7 @@ namespace TitleCapitalizationTool
         public static bool IsSpecialWorld(string word)
         {
             return _articles.Contains(word) ||
-                _unions.Contains(word) ||
+                _conjunctions.Contains(word) ||
                 _preposition.Contains(word);
         }
     }
