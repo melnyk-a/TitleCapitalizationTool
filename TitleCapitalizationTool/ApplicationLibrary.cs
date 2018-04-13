@@ -4,33 +4,45 @@ namespace TitleCapitalizationTool
 {
     internal static class ApplicationLibrary
     {
-        private static List<char> _punctuators = new List<char>
+        private static IEnumerable<char> _punctuators = new char[]
         {
             ',', ';', ':', '-', '.', '!', '?'
         };
-        private static List<string> _articles = new List<string>
+        private static IEnumerable<string> _articles = new string[]
         {
             "a", "an", "the"
         };
-        private static List<string> _conjunctions = new List<string>
+        private static IEnumerable<string> _conjunctions = new string[]
         {
             "and", "but", "for", "nor", "so", "yet"
         };
-        private static List<string> _prepositions = new List<string>
+        private static IEnumerable<string> _prepositions = new string[]
         {
             "at", "by", "in", "of", "on", "or", "out", "to", "up"
         };
 
         public static bool ContainsPunctuation(char symbol)
         {
-            return _punctuators.Contains(symbol);
+            return IsContains(_punctuators, symbol);
         }
 
         public static bool IsSpecialWorld(string word)
         {
-            return _articles.Contains(word) ||
-                _conjunctions.Contains(word) ||
-                _prepositions.Contains(word);
+            return IsContains(_articles, word) ||
+                IsContains(_conjunctions, word) ||
+                IsContains(_prepositions, word);
+        }
+        private static bool IsContains<T>(IEnumerable<T> collection, T context)
+        {
+            bool isContains = false;
+            foreach (var item in collection)
+            {
+                if (item.Equals(context))
+                {
+                    isContains = true;
+                }
+            }
+            return isContains;
         }
     }
 }

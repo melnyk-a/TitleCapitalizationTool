@@ -9,8 +9,8 @@ namespace TitleCapitalizationTool
         {
 
         }
-
-        protected override void ModifyStringBuilderList(ref List<StringBuilder> stringBuilders)
+        //todo
+        protected override void ModifyStringBuilderList(ref IList<StringBuilder> stringBuilders)
         {
             for (int i = 0; i < stringBuilders.Count; ++i)
             {

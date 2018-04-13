@@ -40,7 +40,7 @@ namespace TitleCapitalizationTool
             Console.ForegroundColor = ConsoleColor.Green;
 
             StringBuilderList decorator =
-                new FirsAndLastRegisterDecorator(
+                new FirstAndLastRegisterDecorator(
                     new SpecialWordRegisterDecorator(
                         new DashDecorator(new PunctuationDecorator(
                             new SpaceDecorator(new DefaultStringBuilderList(source))))));

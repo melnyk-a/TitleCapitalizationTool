@@ -11,7 +11,7 @@ namespace TitleCapitalizationTool
 
         }
 
-        protected override void ModifyStringBuilderList(ref List<StringBuilder> stringBuilders)
+        protected override void ModifyStringBuilderList(ref IList<StringBuilder> stringBuilders)
         {
             List<StringBuilder> tempBuilders = new List<StringBuilder>();
             for (int i = 0; i < stringBuilders.Count; ++i)

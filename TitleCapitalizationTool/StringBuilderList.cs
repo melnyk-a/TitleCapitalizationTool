@@ -5,16 +5,18 @@ namespace TitleCapitalizationTool
 {
     internal abstract class StringBuilderList
     {
-        public abstract List<StringBuilder> GetStringBuilderList();
+        public abstract IList<StringBuilder> GetStringBuilderList();
 
-        public string GetString(List<StringBuilder> stringBuilders)
+        public string GetString(IEnumerable<StringBuilder> stringBuilders)
         {
-            for (int i = 1; i < stringBuilders.Count; ++i)
+            StringBuilder result = new StringBuilder();
+            foreach(var item in stringBuilders)
             {
-                stringBuilders[0].Append(" ");
-                stringBuilders[0].Append(stringBuilders[i]);
+                result.Append(" ");
+                result.Append(item);
             }
-            return stringBuilders[0].ToString();
+            
+            return result.ToString();
         }
     }
 }

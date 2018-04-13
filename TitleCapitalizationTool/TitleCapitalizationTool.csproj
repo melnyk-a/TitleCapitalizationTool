@@ -45,7 +45,7 @@
     <Compile Include="ApplicationLibrary.cs" />
     <Compile Include="Decorator\DashDecorator.cs" />
     <Compile Include="DefaultStringBuilderList.cs" />
-    <Compile Include="Decorator\FirsAndLastRegisterDecorator.cs" />
+    <Compile Include="Decorator\FirstAndLastRegisterDecorator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Decorator\PunctuationDecorator.cs" />
