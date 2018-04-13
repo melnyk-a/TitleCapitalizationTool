@@ -11,6 +11,7 @@ namespace TitleCapitalizationTool
         {
             _stringBuilders.Add(new StringBuilder(context));
         }
+
         public override List<StringBuilder> GetStringBuilderList()
         {
             return _stringBuilders;

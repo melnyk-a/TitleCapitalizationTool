@@ -13,6 +13,7 @@ namespace TitleCapitalizationTool
         }
 
         protected abstract void ModifyStringBuilderList(ref List<StringBuilder> stringBuilders);
+
         public override List<StringBuilder> GetStringBuilderList()
         {
             var innerStringBuilder = _stringBuilderList.GetStringBuilderList();

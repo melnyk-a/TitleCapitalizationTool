@@ -9,6 +9,7 @@ namespace TitleCapitalizationTool
         {
             return Regex.IsMatch(source, "[ -z]");
         }
+
         private static string InputString()
         {
             Console.Write("Enter title to capitalize: ");
@@ -24,6 +25,7 @@ namespace TitleCapitalizationTool
             Console.ResetColor();
             return input;
         }
+
         private static void Capitalize(string source)
         {
             if (source == null)
@@ -47,11 +49,13 @@ namespace TitleCapitalizationTool
             Console.WriteLine(str);
             Console.ResetColor();
         }
+
         private static void Execute(string context)
         {
             Capitalize(context);
             Console.WriteLine();
         }
+
         public static void Main(string[] args)
         {
             if (args.Length==0)

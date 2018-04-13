@@ -6,6 +6,7 @@ namespace TitleCapitalizationTool
     internal abstract class StringBuilderList
     {
         public abstract List<StringBuilder> GetStringBuilderList();
+
         public string GetString(List<StringBuilder> stringBuilders)
         {
             for (int i = 1; i < stringBuilders.Count; ++i)

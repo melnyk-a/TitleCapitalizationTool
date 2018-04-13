@@ -40,6 +40,7 @@ namespace TitleCapitalizationTool
             }
             stringBuilders = tempBuilders;
         }
+
         private void ExpandBuilderList(List<StringBuilder> expanded, StringBuilder source, char symbol)
         {
             string builderString = source.ToString(0, source.Length);

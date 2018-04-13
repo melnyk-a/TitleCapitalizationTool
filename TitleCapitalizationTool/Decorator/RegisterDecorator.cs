@@ -13,6 +13,7 @@ namespace TitleCapitalizationTool
         {
             word[0] = char.ToUpper(word[0]);
         }
+
         protected void ToLower(StringBuilder word, int startIndex)
         {
             for (int i = startIndex; i < word.Length; ++i)

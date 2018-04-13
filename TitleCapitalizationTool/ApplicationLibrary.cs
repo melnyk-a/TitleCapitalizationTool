@@ -16,6 +16,7 @@ namespace TitleCapitalizationTool
         {
             return _charLibrary.Contains(symbol);
         }
+
         public static bool IsSpecialWorld(string word)
         {
             return _articles.Contains(word) ||
