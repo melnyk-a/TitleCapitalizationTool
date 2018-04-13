@@ -4,7 +4,7 @@ namespace TitleCapitalizationTool
 {
     internal static class ApplicationLibrary
     {
-        private static List<char> _charLibrary = new List<char>
+        private static List<char> _punctuators = new List<char>
         {
             ',', ';', ':', '-', '.', '!', '?'
         };
@@ -23,7 +23,7 @@ namespace TitleCapitalizationTool
 
         public static bool ContainsPunctuation(char symbol)
         {
-            return _charLibrary.Contains(symbol);
+            return _punctuators.Contains(symbol);
         }
 
         public static bool IsSpecialWorld(string word)
