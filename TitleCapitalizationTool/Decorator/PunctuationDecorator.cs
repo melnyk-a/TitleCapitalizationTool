@@ -8,7 +8,6 @@ namespace TitleCapitalizationTool
     {
         public PunctuationDecorator(StringBuilderList contex) : base(contex)
         {
-
         }
 
         protected override void ModifyStringBuilderList(IList<StringBuilder> stringBuilders)

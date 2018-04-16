@@ -8,7 +8,6 @@ namespace TitleCapitalizationTool
     {
         public SpaceDecorator(StringBuilderList context) : base(context)
         {
-
         }
 
         protected override void ModifyStringBuilderList(IList<StringBuilder> stringBuilders)

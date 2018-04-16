@@ -7,7 +7,6 @@ namespace TitleCapitalizationTool
     {
         public FirstAndLastRegisterDecorator(StringBuilderList context) : base(context)
         {
-
         }
 
         protected override void ModifyStringBuilderList(IList<StringBuilder> stringBuilders)

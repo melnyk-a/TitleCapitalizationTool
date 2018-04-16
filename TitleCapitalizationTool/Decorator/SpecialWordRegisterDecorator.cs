@@ -7,7 +7,6 @@ namespace TitleCapitalizationTool
     {
         public SpecialWordRegisterDecorator(StringBuilderList contex) : base(contex)
         {
-
         }
 
         protected override void ModifyStringBuilderList(IList<StringBuilder> stringBuilders)

@@ -7,9 +7,8 @@ namespace TitleCapitalizationTool
     {
         public DashDecorator(StringBuilderList context) : base(context)
         {
-
         }
-        //todo
+      
         protected override void ModifyStringBuilderList(IList<StringBuilder> stringBuilders)
         {
             for (int i = 0; i < stringBuilders.Count; ++i)

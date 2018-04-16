@@ -6,7 +6,6 @@ namespace TitleCapitalizationTool
     {
         public RegisterDecorator(StringBuilderList context) : base(context)
         {
-
         }
 
         protected void CapitilizeFirstCharacter(StringBuilder word)
