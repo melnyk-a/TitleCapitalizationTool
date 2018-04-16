@@ -14,10 +14,10 @@ namespace TitleCapitalizationTool
         {
             Console.Write("Enter title to capitalize: ");
             Console.ForegroundColor = ConsoleColor.Red;
-            string input = String.Empty;
+            string input = string.Empty;
             int left = Console.CursorLeft;
             int top = Console.CursorTop;
-            while (input == String.Empty)
+            while (input == string.Empty)
             {
                 Console.SetCursorPosition(left, top);
                 input = Console.ReadLine();
@@ -42,8 +42,10 @@ namespace TitleCapitalizationTool
             StringBuilderList decorator =
                 new FirstAndLastRegisterDecorator(
                     new SpecialWordRegisterDecorator(
-                        new DashDecorator(new PunctuationDecorator(
-                            new SpaceDecorator(new DefaultStringBuilderList(source))))));
+                        new DashDecorator(
+                            new PunctuationDecorator(
+                                new SpaceDecorator(
+                                    new DefaultStringBuilderList(source))))));
             string result = decorator.GetString(decorator.GetStringBuilderList());
 
             Console.WriteLine(result);
