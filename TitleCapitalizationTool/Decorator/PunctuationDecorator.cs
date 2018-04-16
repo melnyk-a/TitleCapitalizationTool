@@ -12,7 +12,7 @@ namespace TitleCapitalizationTool
 
         protected override void ModifyStringBuilderList(IList<StringBuilder> stringBuilders)
         {
-            List<StringBuilder> tempBuilders = new List<StringBuilder>();
+            List<StringBuilder> resultBuilders = new List<StringBuilder>();
             for (int i = 0; i < stringBuilders.Count; ++i)
             {
                 for (int j = 0; j < stringBuilders[i].Length; ++j)
@@ -22,23 +22,23 @@ namespace TitleCapitalizationTool
                     {
                         if (stringBuilders[i].Length == 1)
                         {
-                            tempBuilders[tempBuilders.Count - 1].Append(punctuationChar);
+                            resultBuilders[resultBuilders.Count - 1].Append(punctuationChar);
                         }
                         else
                         {
-                            ExpandBuilderList(tempBuilders, stringBuilders[i],
+                            ExpandBuilderList(resultBuilders, stringBuilders[i],
                                 punctuationChar);
                             break;
                         }
                     }
                     else if (j == stringBuilders[i].Length - 1)
                     {
-                        tempBuilders.Add(stringBuilders[i]);
+                        resultBuilders.Add(stringBuilders[i]);
                     }
                 }
             }
             stringBuilders.Clear();
-            foreach (var item in tempBuilders)
+            foreach (var item in resultBuilders)
             {
                 stringBuilders.Add(item);
             }

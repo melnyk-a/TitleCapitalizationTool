@@ -12,18 +12,18 @@ namespace TitleCapitalizationTool
 
         protected override void ModifyStringBuilderList(IList<StringBuilder> stringBuilders)
         {
-            List<StringBuilder> tempBuilders = new List<StringBuilder>();
+            List<StringBuilder> resultBuilders = new List<StringBuilder>();
             for (int i = 0; i < stringBuilders.Count; ++i)
             {
                 string source = stringBuilders[i].ToString(0, stringBuilders[i].Length);
                 string[] substrings = source.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 foreach (var item in substrings)
                 {
-                    tempBuilders.Add(new StringBuilder(item));
+                    resultBuilders.Add(new StringBuilder(item));
                 }
             }
             stringBuilders.Clear();
-            foreach (var item in tempBuilders)
+            foreach (var item in resultBuilders)
             {
                 stringBuilders.Add(item);
             }
