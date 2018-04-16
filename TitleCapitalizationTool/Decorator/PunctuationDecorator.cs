@@ -6,7 +6,7 @@ namespace TitleCapitalizationTool
 {
     internal class PunctuationDecorator : StringBuilderListDecorator
     {
-        public PunctuationDecorator(StringBuilderList contex) : base(contex)
+        public PunctuationDecorator(StringBuilderList context) : base(context)
         {
         }
 
