@@ -15,8 +15,8 @@ namespace TitleCapitalizationTool
             List<StringBuilder> tempBuilders = new List<StringBuilder>();
             for (int i = 0; i < stringBuilders.Count; ++i)
             {
-                string str = stringBuilders[i].ToString(0, stringBuilders[i].Length);
-                string[] substrings = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                string source = stringBuilders[i].ToString(0, stringBuilders[i].Length);
+                string[] substrings = source.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 foreach (var item in substrings)
                 {
                     tempBuilders.Add(new StringBuilder(item));

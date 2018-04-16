@@ -44,9 +44,9 @@ namespace TitleCapitalizationTool
                     new SpecialWordRegisterDecorator(
                         new DashDecorator(new PunctuationDecorator(
                             new SpaceDecorator(new DefaultStringBuilderList(source))))));
-            string str = decorator.GetString(decorator.GetStringBuilderList());
+            string result = decorator.GetString(decorator.GetStringBuilderList());
 
-            Console.WriteLine(str);
+            Console.WriteLine(result);
             Console.ResetColor();
         }
 
@@ -56,9 +56,9 @@ namespace TitleCapitalizationTool
             Console.WriteLine();
         }
 
-        public static void Main(string[] args)
+        public static void Main(string[] commandLineArguments)
         {
-            if (args.Length==0)
+            if (commandLineArguments.Length==0)
             {
                 do
                 {
@@ -70,9 +70,9 @@ namespace TitleCapitalizationTool
                 int i = 0;
                 do
                 {
-                    Execute(args[i]);
+                    Execute(commandLineArguments[i]);
                     ++i;
-                } while (i < args.Length);
+                } while (i < commandLineArguments.Length);
                 Console.ReadKey();
             }
         }
